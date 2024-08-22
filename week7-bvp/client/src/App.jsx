@@ -18,7 +18,7 @@ function App() {
   }, []);
 
   async function getmessages() {
-    const response = await fetch("http://localhost:8080/messages");
+    const response = await fetch("https://week7-bvp-2.onrender.com/messages");
     const data = await response.json();
     setmessages(data);
   }
@@ -26,7 +26,7 @@ function App() {
   async function handleSubmit(event) {
     event.preventDefault();
     console.log("The form values are", FormValues);
-    await fetch("http://localhost:8080/messages", {
+    await fetch("https://week7-bvp-2.onrender.com/messages", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
