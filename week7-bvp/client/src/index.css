@@ -51,3 +51,8 @@ button {
   height: 6em;
   width: 18em;
 }
+
+.message {
+  width: 80vh;
+  height: fit-content;
+}

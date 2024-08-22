@@ -33,7 +33,7 @@ function App() {
       },
       body: JSON.stringify(FormValues),
     });
-    setForm({
+    setFormValues({
       name: "",
       message: "",
     });

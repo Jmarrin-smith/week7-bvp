@@ -1,4 +1,5 @@
 export default function PostPage(props) {
+  console.log(props.messages);
   return (
     <>
       <h2>posts board</h2>
@@ -6,9 +7,9 @@ export default function PostPage(props) {
         return (
           <>
             <div className="message">
-              <h3>{message.name}</h3>
+              <h3>{message.msg_name}</h3>
               <br />
-              <p>{message.message}</p>
+              <p>{message.content}</p>
             </div>
           </>
         );

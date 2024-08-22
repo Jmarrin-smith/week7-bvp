@@ -25,10 +25,10 @@ app.post("/messages", async function (request, response) {
   const message = request.body.message;
 
   // add the cnadle to the database
-  await db.query(
-    `insert into messages (msg_name,content) values ('admin','welcome');`,
-    [name, message]
-  );
+  await db.query(`insert into messages (msg_name,content) values ($1,$2);`, [
+    name,
+    message,
+  ]);
   response.json("messages POST endpoint");
 });
 
